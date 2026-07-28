@@ -1,0 +1,14 @@
+[project]
+name = "qalamocr"
+version = "0.1.0"
+description = "Self-hostable, Arabic-first OCR & document-extraction engine"
+readme = "README.md"
+authors = [
+    { name = "Iheb DHOUIBI", email = "ihebdhouibidh@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = []
+
+[build-system]
+requires = ["uv_build>=0.11.33,<0.12.0"]
+build-backend = "uv_build"
