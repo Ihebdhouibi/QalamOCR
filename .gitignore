@@ -1,0 +1,40 @@
+# ───────────────────────────────────────────────────────────────
+# QalamOCR — internal conception / design notes (NOT for public repo)
+# Theoretical & technical conception of the engine is kept private.
+# ───────────────────────────────────────────────────────────────
+conception/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+env/
+.eggs/
+build/
+dist/
+
+# Models & data (large / licensed artifacts)
+*.onnx
+*.pdparams
+*.pdmodel
+models/
+weights/
+datasets/
+*.ckpt
+*.pt
+*.pth
+
+# Notebooks
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+*.log
+.cache/
+tmp/
