@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "Bash(gh label *)",
+      "Bash(mkdir -p .gh-issue-bodies)",
+      "Bash(cat)",
+      "Bash(gh issue *)",
+      "Bash(gh pr create --repo Ihebdhouibi/QalamOCR --base develop --head feature/m0-01-claude-md --title 'chore: add CLAUDE.md working agreement \\(M0-01\\)' --body 'Implements M0-01. Adds the root working agreement: no AI attribution, no emojis, end-of-task summary rule, commit type convention, branching model, definition of done. *)",
+      "Bash(pre-commit install *)",
+      "Bash(pre-commit run *)",
+      "Bash(gh pr create --repo Ihebdhouibi/QalamOCR --base develop --head feature/m0-02-pre-commit --title 'chore: add pre-commit config and gitattributes \\(M0-02\\)' --body 'Implements M0-02. Adds .pre-commit-config.yaml \\(trailing-whitespace, end-of-file-fixer, check-yaml, check-added-large-files, check-merge-conflict, mixed-line-ending, ruff, ruff-format, conventional-commit message check\\) and .gitattributes \\(eol=lf\\). Documents install steps in README. Normalized LICENSE line endings as a side effect of the first pre-commit run. *)"
+    ]
+  }
+}

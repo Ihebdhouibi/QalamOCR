@@ -38,3 +38,15 @@ If uv isn't installed yet:
 ```powershell
 irm https://astral.sh/uv/install.ps1 | iex
 ```
+
+## Pre-commit hooks
+
+This repo uses [pre-commit](https://pre-commit.com/) to enforce formatting, linting, and the
+commit message convention (see `CLAUDE.md`). Install once per clone:
+
+```bash
+pip install pre-commit
+pre-commit install
+pre-commit install --hook-type commit-msg
+pre-commit run --all-files   # first run may reformat files; re-stage and commit
+```
