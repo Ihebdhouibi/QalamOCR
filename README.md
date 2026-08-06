@@ -7,6 +7,9 @@ under Apache-2.0.
 
 Status: pre-development.
 
+See `CONTRIBUTING.md` for the contribution workflow, `CODE_OF_CONDUCT.md` for community
+standards, and `NOTICE` for third-party attributions.
+
 ## Development setup
 
 Dependencies are managed with [uv](https://docs.astral.sh/uv/) via
