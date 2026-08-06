@@ -1,0 +1,41 @@
+Arabic Documents OCR Dataset - Cleaning Report
+
+Dataset:
+Arabic Documents OCR Dataset
+
+Source:
+Kaggle - humansintheloop/arabic-documents-ocr-dataset
+
+Processing steps performed:
+- Dataset structure inspection
+- Image and annotation validation
+- JSON annotation validation
+- Checking missing annotations
+- Checking invalid files
+- Dataset cleaning
+- Metadata extraction
+
+Validation results:
+- Valid images: 10045
+- Images without annotation: 0
+- Bad images: 0
+- Valid JSON files: 10046
+- Bad JSON files: 0
+
+Annotation analysis:
+Classes:
+- Body text: 265132
+- Page: 10133
+- Title: 5228
+
+Geometry types:
+- Rectangle: 270360
+- Polygon: 10133
+
+Transcription analysis:
+- Samples containing transcription labels were analyzed.
+- Missing transcription cases were identified during analysis.
+
+Output:
+- Clean dataset metadata generated.
+- Dataset prepared for unified OCR format.
