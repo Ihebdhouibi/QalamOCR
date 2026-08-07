@@ -1,0 +1,31 @@
+Yarmouk OCR Dataset - Cleaning Report
+
+Dataset:
+Yarmouk OCR Dataset
+
+Source:
+Kaggle - eyadwin/yarmouk-ocr-dataset
+
+Processing steps performed:
+- Dataset structure inspection
+- PDF files validation
+- OCR text files validation
+- Checking PDF-text matching
+- Dataset cleaning
+- Metadata preparation
+
+Validation results:
+- Valid PDF files: 2924
+- Bad PDF files: 0
+
+Text validation:
+- Valid text files: 2924
+- Empty text files: 0
+
+Consistency checks:
+- PDF without text: 0
+- Text without PDF: 0
+
+Output:
+- Dataset prepared for unified OCR format.
+- Metadata generated for integration with other Arabic OCR datasets.
