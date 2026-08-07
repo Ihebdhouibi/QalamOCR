@@ -5,79 +5,57 @@ import json
 unified_samples = []
 
 
-# =====================================
+# ==========================
 # Arabic Documents OCR Dataset
-# =====================================
+# ==========================
 
-arabic_docs_root = "/kaggle/input/datasets/humansintheloop/arabic-documents-ocr-dataset/Documents/Documents"
+arabic_dataset_path = "datasets/arabic_documents"
 
+if os.path.exists(arabic_dataset_path):
 
-for root, dirs, files in os.walk(arabic_docs_root):
+    for root, dirs, files in os.walk(arabic_dataset_path):
 
-    if root.endswith("/img"):
+        for file in files:
 
-        for img in files:
-
-            if img.lower().endswith((".jpg", ".jpeg", ".png")):
-
-                img_path = os.path.join(root, img)
-
-                ann_root = root.replace("/img", "/ann")
-
-                ann_path = os.path.join(
-                    ann_root,
-                    os.path.splitext(img)[0] + ".json"
-                )
+            if file.lower().endswith((".jpg", ".jpeg", ".png")):
 
                 unified_samples.append({
+                    "id": file,
                     "source": "Arabic Documents OCR Dataset",
-                    "file": img_path,
-                    "annotation": ann_path if os.path.exists(ann_path) else None,
-                    "annotation_type": "JSON",
-                    "text_available": True if os.path.exists(ann_path) else False
+                    "file": os.path.join(root, file),
+                    "annotation": None,
+                    "annotation_type": "image",
+                    "text_available": False
                 })
 
 
-# =====================================
+# ==========================
 # Yarmouk OCR Dataset
-# =====================================
+# ==========================
 
-yarmouk_pdf_root = "/kaggle/input/datasets/eyadwin/yarmouk-ocr-dataset/Training/Training/Scanned/training/training"
+yarmouk_path = "datasets/yarmouk"
 
-yarmouk_text_root = "/kaggle/input/datasets/eyadwin/yarmouk-ocr-dataset/Training/Training/OCR/text/text"
+if os.path.exists(yarmouk_path):
 
+    for root, dirs, files in os.walk(yarmouk_path):
 
-for pdf in os.listdir(yarmouk_pdf_root):
+        for file in files:
 
-    if pdf.endswith(".pdf"):
+            if file.lower().endswith((".pdf", ".txt")):
 
-        txt_file = pdf.replace(".pdf", ".txt")
-
-        txt_path = os.path.join(
-            yarmouk_text_root,
-            txt_file
-        )
-
-        unified_samples.append({
-
-            "source": "Yarmouk OCR Dataset",
-
-            "file": os.path.join(
-                yarmouk_pdf_root,
-                pdf
-            ),
-
-            "annotation": txt_path if os.path.exists(txt_path) else None,
-
-            "annotation_type": "OCR text",
-
-            "text_available": True if os.path.exists(txt_path) else False
-        })
+                unified_samples.append({
+                    "id": file,
+                    "source": "Yarmouk OCR Dataset",
+                    "file": os.path.join(root, file),
+                    "annotation": None,
+                    "annotation_type": "ocr_text",
+                    "text_available": file.endswith(".txt")
+                })
 
 
-# =====================================
-# Save Unified Metadata
-# =====================================
+# ==========================
+# Create JSON
+# ==========================
 
 with open(
     "unified_metadata.json",
@@ -93,5 +71,5 @@ with open(
     )
 
 
-print("Total unified samples:", len(unified_samples))
-print("Unified metadata saved")
+print("Total samples:", len(unified_samples))
+print("unified_metadata.json created")
