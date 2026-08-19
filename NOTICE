@@ -1,0 +1,17 @@
+QalamOCR
+Copyright the QalamOCR contributors
+
+This product is licensed under the Apache License, Version 2.0. See the LICENSE file for
+the full license text.
+
+This project builds on, and may bundle or depend on, the following third-party components:
+
+- PaddleOCR (PP-OCR, PP-Structure) - Apache License 2.0
+  https://github.com/PaddlePaddle/PaddleOCR
+
+- PaddleOCR-VL - Apache License 2.0
+  https://huggingface.co/PaddlePaddle/PaddleOCR-VL
+
+Attribution for any training or evaluation datasets incorporated into this project will be
+added here as they are adopted, once their licenses have been audited for compatibility with
+this project's commercial-use posture (see the M0-13 dataset license audit issue).
